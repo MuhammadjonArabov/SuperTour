@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Tour</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="logo">Super Tour</a>
+            <ul class="nav-links">
+                <li><a href="#">Biz haqimizda</a></li>
+                <li><a href="#">Hamkorlik</a></li>
+                <li><a href="#">Bilan muzokara</a></li>
+                <li><a href="#">Chegirmalar</a></li>
+                <li><a href="#">Aloqa</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        {% if success_message %}
+            <div class="success-message">
+                Ariza muvaffaqiyatli yuborildi!
+            </div>
+        {% endif %}
+
+        <h1>Maslahat olish uchun ma'lumot qoldiring!</h1>
+        <form method="post" action="{% url 'application_form' %}">
+            {% csrf_token %}
+            <input type="text" name="full_name" placeholder="F.I.O." required>
+            <input type="tel" name="phone_number" placeholder="Telefon raqamingiz" required>
+            <input type="email" name="email" placeholder="E-mail" required>
+            <button type="submit">Jo'natish</button>
+        </form>
+    </div>
+</body>
+</html>
