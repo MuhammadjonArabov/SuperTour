@@ -163,10 +163,10 @@ from django.utils.translation import gettext_lazy as _
 
 JAZZMIN_SETTINGS = {
     # title of the window (Will default to current_admin_site.site_title if absent or None)
-    "site_title": "Kvant Admin",
+    "site_title": "SuperTour Admin",
 
     # Title on the login screen (19 chars max) (defaults to current_admin_site.site_header if absent or None)
-    "site_header": "Kvant",
+    "site_header": "SuperTour",
 
     # Title on the brand (19 chars max) (defaults to current_admin_site.site_header if absent or None)
     "site_brand": " ",
@@ -187,14 +187,14 @@ JAZZMIN_SETTINGS = {
     "site_icon": None,
 
     # Welcome text on the login screen
-    "welcome_sign": "Дабро пожаловать в Kvant Admin",
+    "welcome_sign": "Дабро пожаловать в SuperTour Admin",
 
     # Copyright on the footer
     "copyright": "Acme Library Ltd",
 
     # List of model admins to search from the search bar, search bar omitted if excluded
     # If you want to use a single search field you don't need to use a list, you can use a simple string
-    "search_model": ['common.Product', 'common.Brand', 'users.User'],
+    #"search_model": ['common.Product', 'common.Brand', 'users.User'],
 
     # Field name on user model that contains avatar ImageField/URLField/Charfield or a callable that receives the user
     "user_avatar": None,
