@@ -108,6 +108,11 @@ button:hover {
     transition: all 0.3s ease-in-out;
 }
 
+.error {
+    color: red;
+    font-size: 12px;
+}
+
 .success-message:hover {
     background-color: #45a049;  /* Hover holatida rang o'zgartirish */
 }

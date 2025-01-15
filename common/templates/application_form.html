@@ -28,11 +28,43 @@
         {% endif %}
 
         <h1>Maslahat olish uchun ma'lumot qoldiring!</h1>
-        <form method="post" action="{% url 'common:application_form' %}">
+
+        <form method="POST" action="{% url 'common:application_form' %}">
             {% csrf_token %}
-            <input type="text" name="full_name" placeholder="F.I.O." required>
-            <input type="tel" name="phone_number" placeholder="Telefon raqamingiz" required>
-            <input type="email" name="email" placeholder="E-mail" required>
+
+            <div class="form-group">
+                <input type="text" name="full_name" placeholder="F.I.O." value="{{ form.full_name.value|default:'' }}" required>
+                {% if form.full_name.errors %}
+                    <div class="error">
+                        {% for error in form.full_name.errors %}
+                            <p>{{ error }}</p>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+
+            <div class="form-group">
+                <input type="tel" name="phone_number" placeholder="Telefon raqamingiz" value="{{ form.phone_number.value|default:'' }}" required>
+                {% if form.phone_number.errors %}
+                    <div class="error">
+                        {% for error in form.phone_number.errors %}
+                            <p>{{ error }}</p>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+
+            <div class="form-group">
+                <input type="email" name="email" placeholder="E-mail" value="{{ form.email.value|default:'' }}" required>
+                {% if form.email.errors %}
+                    <div class="error">
+                        {% for error in form.email.errors %}
+                            <p>{{ error }}</p>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+
             <button type="submit">Jo'natish</button>
         </form>
     </div>

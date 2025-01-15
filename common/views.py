@@ -11,11 +11,12 @@ def application_form_view(request):
         if form.is_valid():
             form.save()
             return render(request, 'application_form.html', {'form': form, 'success_message': True})
+        else:
+            return render(request, 'application_form.html', {'form': form})
     else:
         form = ApplicationForm()
 
     return render(request, 'application_form.html', {'form': form})
-
 
 class ApplicationViewSet(viewsets.ModelViewSet):
     queryset = Application.objects.all()
