@@ -1,0 +1,143 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #007bff;
+    padding: 15px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Center the links */
+    flex-grow: 1; /* Allow links to take available space */
+    gap: 20px; /* Space between links */
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #e0e0e0; /* Lighter color on hover */
+}
+
+/* Main Content */
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Success Message */
+.success-message {
+    background-color: #4CAF50;  /* Yashil fon */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    margin-bottom: 30px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.success-message:hover {
+    background-color: #45a049;  /* Hover holatida rang o'zgartirish */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+    }
+
+    .nav-links {
+        flex-direction: column; /* Stack links vertically */
+        gap: 10px; /* Space between links */
+    }
+
+    .nav-links a {
+        font-size: 14px; /* Smaller font size on mobile */
+    }
+
+    .container {
+        margin: 20px; /* Adjust margin for smaller screens */
+        padding: 15px; /* Adjust padding */
+    }
+
+    h1 {
+        font-size: 24px; /* Smaller heading size on mobile */
+    }
+
+    button {
+        font-size: 14px; /* Smaller button size on mobile */
+    }
+}

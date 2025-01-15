@@ -1,7 +1,8 @@
-# views.py
 from django.shortcuts import render
-from django.http import HttpResponse
 from .forms import ApplicationForm
+from rest_framework import viewsets
+from .models import Application
+from .serializers import ApplicationSerializers
 
 
 def application_form_view(request):
@@ -14,3 +15,8 @@ def application_form_view(request):
         form = ApplicationForm()
 
     return render(request, 'application_form.html', {'form': form})
+
+
+class ApplicationViewSet(viewsets.ModelViewSet):
+    queryset = Application.objects.all()
+    serializer_class = ApplicationSerializers
