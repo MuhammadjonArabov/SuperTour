@@ -9,7 +9,7 @@ body {
 /* Navbar Styles */
 .navbar {
     background-color: #007bff;
-    padding: 15px 20px;
+    padding: 13px 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -31,7 +31,7 @@ body {
     display: flex;
     justify-content: center; /* Center the links */
     flex-grow: 1; /* Allow links to take available space */
-    gap: 20px; /* Space between links */
+    gap: 170px; /* Space between links */
 }
 
 .nav-links li {
