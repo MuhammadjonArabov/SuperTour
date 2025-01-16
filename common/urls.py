@@ -4,6 +4,8 @@ from .views import ApplicationViewSet, application_form_view, ApplicationStatusS
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 from rest_framework import permissions
+from django.conf import settings
+from django.conf.urls.static import static
 
 router = DefaultRouter()
 router.register(r'api', ApplicationViewSet, basename='application')
@@ -31,4 +33,4 @@ urlpatterns = [
     path('api/', include(router.urls)),
 
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='swagger-ui'),
-]
+] + static(settings.STATIC_URL, document_root=settings.MEDIA_ROOT)
