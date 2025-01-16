@@ -1,4 +1,3 @@
-from django.db.models.fields import return_None
 from rest_framework import serializers
 from .models import Application
 import re
